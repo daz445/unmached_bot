@@ -1,0 +1,464 @@
+2024-09-05 17:23:40,950 - root - INFO - Старт работы бота
+2024-09-05 17:51:47,429 - root - INFO - Старт работы бота
+2024-09-05 17:52:17,214 - root - INFO - Старт работы бота
+2024-09-05 17:54:10,849 - root - INFO - Старт работы бота
+2024-09-05 17:54:15,173 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 17:54:15,173 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:09:20,436 - root - INFO - Старт работы бота
+2024-09-05 19:09:21,109 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:09:21,109 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:11:20,817 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220111, "message": {"message_id": 12, "from": {"id": 5626813932, "is_bot": false, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "language_code": "ru"}, "chat": {"id": 5626813932, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "type": "private"}, "date": 1725563492, "text": "/generate", "entities": [{"type": "bot_command", "offset": 0, "length": 9}]}}: 'function' object is not iterable
+2024-09-05 19:11:20,817 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-21' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'function' object is not iterable")>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 59, in add_person_chat
+    for x in sql.get_all_persons:
+TypeError: 'function' object is not iterable
+2024-09-05 19:11:41,349 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 139, in make_request
+    async with session.post(url, data=req, **kwargs) as response:
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client.py", line 1167, in __aenter__
+    self._resp = await self._coro
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client.py", line 586, in _request
+    await resp.start(conn)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\client_reqrep.py", line 905, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiohttp\streams.py", line 616, in read
+    await self._waiter
+aiohttp.client_exceptions.ClientOSError: [WinError 64] Указанное сетевое имя более недоступно
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 142, in make_request
+    raise exceptions.NetworkError(f"aiohttp client throws an error: {e.__class__.__name__}: {e}")
+aiogram.utils.exceptions.NetworkError: Aiohttp client throws an error: ClientOSError: [WinError 64] Указанное сетевое имя более недоступно
+2024-09-05 19:14:53,852 - root - INFO - Старт работы бота
+2024-09-05 19:14:54,455 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:14:54,455 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:14:56,972 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220113, "message": {"message_id": 15, "from": {"id": 5626813932, "is_bot": false, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "language_code": "ru"}, "chat": {"id": 5626813932, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "type": "private"}, "date": 1725563708, "text": "/generate", "entities": [{"type": "bot_command", "offset": 0, "length": 9}]}}: 'function' object is not iterable
+2024-09-05 19:14:56,972 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'function' object is not iterable")>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 59, in add_person_chat
+    for x in sql.get_all_persons:
+TypeError: 'function' object is not iterable
+2024-09-05 19:14:59,753 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220114, "message": {"message_id": 16, "from": {"id": 5626813932, "is_bot": false, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "language_code": "ru"}, "chat": {"id": 5626813932, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "type": "private"}, "date": 1725563711, "text": "/generate", "entities": [{"type": "bot_command", "offset": 0, "length": 9}]}}: 'function' object is not iterable
+2024-09-05 19:14:59,753 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'function' object is not iterable")>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 59, in add_person_chat
+    for x in sql.get_all_persons:
+TypeError: 'function' object is not iterable
+2024-09-05 19:15:09,670 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220116, "message": {"message_id": 19, "from": {"id": 5626813932, "is_bot": false, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "language_code": "ru"}, "chat": {"id": 5626813932, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "type": "private"}, "date": 1725563721, "text": "/generate", "entities": [{"type": "bot_command", "offset": 0, "length": 9}]}}: 'function' object is not iterable
+2024-09-05 19:15:09,670 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'function' object is not iterable")>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 59, in add_person_chat
+    for x in sql.get_all_persons:
+TypeError: 'function' object is not iterable
+2024-09-05 19:16:31,120 - root - INFO - Старт работы бота
+2024-09-05 19:16:31,898 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:16:31,898 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:16:36,346 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220118, "message": {"message_id": 22, "from": {"id": 901883503, "is_bot": false, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "language_code": "ru"}, "chat": {"id": 901883503, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "type": "private"}, "date": 1725563808, "text": "/generate", "entities": [{"type": "bot_command", "offset": 0, "length": 9}]}}: 'function' object is not iterable
+2024-09-05 19:16:36,346 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'function' object is not iterable")>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 59, in add_person_chat
+    for x in sql.get_all_persons:
+TypeError: 'function' object is not iterable
+2024-09-05 19:16:59,765 - root - INFO - Старт работы бота
+2024-09-05 19:17:02,310 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:17:02,310 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:17:04,576 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220119, "message": {"message_id": 23, "from": {"id": 901883503, "is_bot": false, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "language_code": "ru"}, "chat": {"id": 901883503, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "type": "private"}, "date": 1725563834, "text": "/generate", "entities": [{"type": "bot_command", "offset": 0, "length": 9}]}}: 'function' object is not iterable
+2024-09-05 19:17:04,576 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'function' object is not iterable")>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 59, in add_person_chat
+    for x in sql.get_all_persons:
+TypeError: 'function' object is not iterable
+2024-09-05 19:17:11,331 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220120, "message": {"message_id": 24, "from": {"id": 901883503, "is_bot": false, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "language_code": "ru"}, "chat": {"id": 901883503, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "type": "private"}, "date": 1725563843, "text": "/generate", "entities": [{"type": "bot_command", "offset": 0, "length": 9}]}}: 'function' object is not iterable
+2024-09-05 19:17:11,336 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'function' object is not iterable")>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 59, in add_person_chat
+    for x in sql.get_all_persons:
+TypeError: 'function' object is not iterable
+2024-09-05 19:17:39,573 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220121, "message": {"message_id": 25, "from": {"id": 901883503, "is_bot": false, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "language_code": "ru"}, "chat": {"id": 901883503, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "type": "private"}, "date": 1725563871, "text": "/generate", "entities": [{"type": "bot_command", "offset": 0, "length": 9}]}}: 'function' object is not iterable
+2024-09-05 19:17:39,573 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-14' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'function' object is not iterable")>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 59, in add_person_chat
+    for x in sql.get_all_persons:
+TypeError: 'function' object is not iterable
+2024-09-05 19:17:44,599 - root - INFO - Старт работы бота
+2024-09-05 19:17:45,227 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:17:45,227 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:18:06,786 - root - INFO - Старт работы бота
+2024-09-05 19:18:07,329 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:18:07,329 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:18:10,532 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220123, "message": {"message_id": 28, "from": {"id": 901883503, "is_bot": false, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "language_code": "ru"}, "chat": {"id": 901883503, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "type": "private"}, "date": 1725563902, "text": "/generate", "entities": [{"type": "bot_command", "offset": 0, "length": 9}]}}: 'function' object is not iterable
+2024-09-05 19:18:10,532 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-7' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'function' object is not iterable")>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 63, in add_person_chat
+    for x in sql.get_all_persons:
+TypeError: 'function' object is not iterable
+2024-09-05 19:18:32,514 - root - INFO - Старт работы бота
+2024-09-05 19:18:33,047 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:18:33,047 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:18:33,368 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2024-09-05 19:18:38,556 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+  File "c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2024-09-05 19:18:52,426 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220124, "message": {"message_id": 29, "from": {"id": 901883503, "is_bot": false, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "language_code": "ru"}, "chat": {"id": 901883503, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "type": "private"}, "date": 1725563934, "text": "/generate", "entities": [{"type": "bot_command", "offset": 0, "length": 9}]}}: 'function' object is not iterable
+2024-09-05 19:18:52,429 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-8' coro=<Dispatcher._process_polling_updates() done, defined at c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("'function' object is not iterable")>
+Traceback (most recent call last):
+  File "c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "c:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 63, in add_person_chat
+    for x in sql.get_all_persons:
+TypeError: 'function' object is not iterable
+2024-09-05 19:19:13,965 - root - INFO - Старт работы бота
+2024-09-05 19:19:14,488 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:19:14,491 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:19:17,620 - root - INFO - Старт работы бота
+2024-09-05 19:19:18,408 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:19:18,408 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:20:26,415 - root - INFO - Старт работы бота
+2024-09-05 19:20:28,018 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:20:28,018 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:24:11,459 - root - INFO - Старт работы бота
+2024-09-05 19:24:12,039 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:24:12,039 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:30:34,874 - root - INFO - Старт работы бота
+2024-09-05 19:30:35,867 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:30:35,867 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:31:26,968 - root - INFO - Старт работы бота
+2024-09-05 19:31:28,147 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:31:28,147 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:32:51,940 - root - INFO - Старт работы бота
+2024-09-05 19:32:55,488 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:32:55,488 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:32:59,859 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220167, "message": {"message_id": 102, "from": {"id": 901883503, "is_bot": false, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "language_code": "ru"}, "chat": {"id": 901883503, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "type": "private"}, "date": 1725564791, "text": "Готово"}}: near "Сергей": syntax error
+2024-09-05 19:32:59,859 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-18' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=OperationalError('near "Сергей": syntax error')>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 101, in start
+    await bot.send_message(message.chat.id,get_results([x.replace(" \u2705","") for x in proxy["players"] if "\u2705" in x ]))
+  File "c:\Users\Dima\Desktop\unmatched bot\randoms_person.py", line 26, in get_results
+    Map = random_map(playerswhoplay)
+  File "c:\Users\Dima\Desktop\unmatched bot\randoms_person.py", line 18, in random_map
+    Maps = get_all_maps(playerswhoplay)
+  File "c:\Users\Dima\Desktop\unmatched bot\sql.py", line 35, in get_all_maps
+    cursor.execute(sqlite_select_query)
+sqlite3.OperationalError: near "Сергей": syntax error
+2024-09-05 19:33:09,178 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220168, "message": {"message_id": 103, "from": {"id": 901883503, "is_bot": false, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "language_code": "ru"}, "chat": {"id": 901883503, "first_name": "Дмитрий", "last_name": "Зырянов", "username": "Zdima_kem", "type": "private"}, "date": 1725564801, "text": "Готово"}}: near "Сергей": syntax error
+2024-09-05 19:33:09,194 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-21' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=OperationalError('near "Сергей": syntax error')>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 101, in start
+    await bot.send_message(message.chat.id,get_results([x.replace(" \u2705","") for x in proxy["players"] if "\u2705" in x ]))
+  File "c:\Users\Dima\Desktop\unmatched bot\randoms_person.py", line 26, in get_results
+    Map = random_map(playerswhoplay)
+  File "c:\Users\Dima\Desktop\unmatched bot\randoms_person.py", line 18, in random_map
+    Maps = get_all_maps(playerswhoplay)
+  File "c:\Users\Dima\Desktop\unmatched bot\sql.py", line 35, in get_all_maps
+    cursor.execute(sqlite_select_query)
+sqlite3.OperationalError: near "Сергей": syntax error
+2024-09-05 19:33:40,769 - root - INFO - Старт работы бота
+2024-09-05 19:33:54,043 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:33:54,043 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:33:57,214 - aiogram.dispatcher.dispatcher - ERROR - Cause exception while getting updates.
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 381, in start_polling
+    updates = await self.bot.get_updates(
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\bot.py", line 110, in get_updates
+    result = await self.request(api.Methods.GET_UPDATES, payload)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\base.py", line 236, in request
+    return await api.make_request(await self.get_session(), self.server, self.__token, method, data, files,
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 140, in make_request
+    return check_result(method, response.content_type, response.status, await response.text())
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\bot\api.py", line 119, in check_result
+    exceptions.ConflictError.detect(description)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\utils\exceptions.py", line 140, in detect
+    raise err(cls.text or description)
+aiogram.utils.exceptions.TerminatedByOtherGetUpdates: Terminated by other getupdates request; make sure that only one bot instance is running
+2024-09-05 19:34:04,213 - root - INFO - Старт работы бота
+2024-09-05 19:34:08,217 - root - INFO - Старт работы бота
+2024-09-05 19:34:18,973 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:34:18,973 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:38:39,493 - root - INFO - Старт работы бота
+2024-09-05 19:38:42,356 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:38:42,358 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:38:52,324 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220175, "message": {"message_id": 113, "from": {"id": 5626813932, "is_bot": false, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "language_code": "ru"}, "chat": {"id": 5626813932, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "type": "private"}, "date": 1725565144, "text": "Готово"}}: module 'random' has no attribute 'shaffle'
+2024-09-05 19:38:52,324 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=AttributeError("module 'random' has no attribute 'shaffle'")>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 101, in start
+    await bot.send_message(message.chat.id,get_results([x.replace(" \u2705","") for x in proxy["players"] if "\u2705" in x ]))
+  File "c:\Users\Dima\Desktop\unmatched bot\randoms_person.py", line 28, in get_results
+    Map = random_map(playerswhoplay)
+  File "c:\Users\Dima\Desktop\unmatched bot\randoms_person.py", line 21, in random_map
+    random.shaffle(Maps)
+AttributeError: module 'random' has no attribute 'shaffle'
+2024-09-05 19:39:53,863 - root - INFO - Старт работы бота
+2024-09-05 19:39:55,453 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:39:55,453 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:40:02,985 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220177, "message": {"message_id": 116, "from": {"id": 5626813932, "is_bot": false, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "language_code": "ru"}, "chat": {"id": 5626813932, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "type": "private"}, "date": 1725565214, "text": "Готово"}}: 0
+2024-09-05 19:40:02,985 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=KeyError(0)>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 101, in start
+    await bot.send_message(message.chat.id,get_results([x.replace(" \u2705","") for x in proxy["players"] if "\u2705" in x ]))
+  File "c:\Users\Dima\Desktop\unmatched bot\randoms_person.py", line 29, in get_results
+    random.shuffle(Persons)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\random.py", line 394, in shuffle
+    x[i], x[j] = x[j], x[i]
+KeyError: 0
+2024-09-05 19:41:43,211 - root - INFO - Старт работы бота
+2024-09-05 19:41:45,256 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:41:45,256 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:44:52,079 - root - INFO - Старт работы бота
+2024-09-05 19:44:53,522 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:44:53,522 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:45:03,936 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220184, "message": {"message_id": 128, "from": {"id": 5626813932, "is_bot": false, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "language_code": "ru"}, "chat": {"id": 5626813932, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "type": "private"}, "date": 1725565515, "text": "Готово"}}: get_results() got an unexpected keyword argument 'reply_markup'
+2024-09-05 19:45:03,936 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError("get_results() got an unexpected keyword argument 'reply_markup'")>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 101, in start
+    await bot.send_message(message.chat.id,get_results([x.replace(" \u2705","") for x in proxy["players"] if "\u2705" in x ], reply_markup=types.ReplyKeyboardRemove()))
+TypeError: get_results() got an unexpected keyword argument 'reply_markup'
+2024-09-05 19:45:41,821 - root - INFO - Старт работы бота
+2024-09-05 19:45:42,759 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:45:42,759 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:45:47,777 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220186, "message": {"message_id": 131, "from": {"id": 5626813932, "is_bot": false, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "language_code": "ru"}, "chat": {"id": 5626813932, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "type": "private"}, "date": 1725565559, "text": "Готово"}}: list indices must be integers or slices, not str
+2024-09-05 19:45:47,777 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-12' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=TypeError('list indices must be integers or slices, not str')>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 101, in start
+    await bot.send_message(message.chat.id,get_results([x.replace(" \u2705","") for x in proxy["players"] if "\u2705" in x ]), reply_markup=types.ReplyKeyboardRemove())
+  File "c:\Users\Dima\Desktop\unmatched bot\randoms_person.py", line 29, in get_results
+    Map = random_map(playerswhoplay)
+  File "c:\Users\Dima\Desktop\unmatched bot\randoms_person.py", line 21, in random_map
+    Maps+=get_all_maps(playerswhoplay[player])
+TypeError: list indices must be integers or slices, not str
+2024-09-05 19:47:00,652 - root - INFO - Старт работы бота
+2024-09-05 19:47:02,851 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:47:02,851 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:47:34,276 - root - INFO - Старт работы бота
+2024-09-05 19:47:34,990 - aiogram - INFO - Bot: Bot_for_unmatched [@random_unmatched_bot]
+2024-09-05 19:47:34,990 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2024-09-05 19:48:24,964 - root - ERROR - Ошибка при обработке запроса {"update_id": 591220201, "message": {"message_id": 160, "from": {"id": 5626813932, "is_bot": false, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "language_code": "ru"}, "chat": {"id": 5626813932, "first_name": "Андрей", "last_name": "Гришин", "username": "akg1_1", "type": "private"}, "date": 1725565714, "text": "Готово"}}: list index out of range
+2024-09-05 19:48:24,964 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-57' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:407> exception=IndexError('list index out of range')>
+Traceback (most recent call last):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 415, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 235, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 256, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\Dima\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "c:\Users\Dima\Desktop\unmatched bot\main.py", line 101, in start
+    await bot.send_message(message.chat.id,get_results([x.replace(" \u2705","") for x in proxy["players"] if "\u2705" in x ]), reply_markup=types.ReplyKeyboardRemove())
+  File "c:\Users\Dima\Desktop\unmatched bot\randoms_person.py", line 29, in get_results
+    Map = random_map(playerswhoplay)
+  File "c:\Users\Dima\Desktop\unmatched bot\randoms_person.py", line 23, in random_map
+    return Maps[0]
+IndexError: list index out of range
