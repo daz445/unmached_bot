@@ -1,35 +1,25 @@
 
-import asyncio
+
 import asyncpg
 from decouple import config
 
-async def run():
-    conn = await asyncpg.connect(user=config('user'), password=config('password'),
-                                 database=config('database'), host=config('host'))
+async def get_data(table:str):
+    try:
+        config('user')
+        # создаем его
+    except:
+        print('Нет .env')
+
+
+
+    conn = await asyncpg.connect(user=config('user'),
+                                password=config('password'),
+                                database=config('database'), 
+                                host=config('host'),
+                                port=int(config('port'))
+                                )
     values = await conn.fetch(
-        'SELECT * FROM mytable WHERE id = $1',
-        10,
+        f'SELECT * FROM {table} '
     )
+    print(values)
     await conn.close()
-
-asyncio.run(run())
-
-
-
-
-# async def get_user_data(user_id: int, table_name='users_reg'):
-#     async with pg_manager:
-#         user_info = await pg_manager.select_data(table_name=table_name, where_dict={'user_id': user_id}, one_dict=True)
-#         if user_info:
-#             return user_info
-#         else:
-#             return None
-
-
-# async def get_user_data(user_id: int, table_name='users_reg'):
-#     async with pg_manager:
-#         user_info = await pg_manager.select_data(table_name=table_name, where_dict={'user_id': user_id}, one_dict=True)
-#         if user_info:
-#             return user_info
-#         else:
-#             return None
