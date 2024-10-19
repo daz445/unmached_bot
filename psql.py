@@ -12,8 +12,6 @@ async def get_data(table:str):
         create_env()  
             
 
-
-
     conn = await asyncpg.connect(user=config('user'),
                                 password=config('password'),
                                 database=config('database'), 
@@ -26,6 +24,26 @@ async def get_data(table:str):
     
     await conn.close()
     return values
+
+async def create_table(name:str,other_col:str):
+    conn = await asyncpg.connect(user=config('user'),
+                                password=config('password'),
+                                database=config('database'), 
+                                host=config('host'),
+                                port=int(config('port'))
+                                )
+    
+
+    await conn.fetch(f"""
+    CREATE TABLE public.{name}
+    (
+        player text NOT NULL,
+        {other_col} text NOT NULL
+    ); 
+
+    """)
+    
+    await conn.close()
 
 async def create_person(name:str,player:str):
     conn = await asyncpg.connect(user=config('user'),
